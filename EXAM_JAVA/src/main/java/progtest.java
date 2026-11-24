@@ -13,6 +13,7 @@ public abstract class progtest extends ass{
     // for each CID get the mark from list of CIDs
 
 
+    // loop feed in and get list of marks
     @Override
     public  double[] getmarks() {
         double[] marksprog = new double[4];

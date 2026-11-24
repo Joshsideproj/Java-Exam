@@ -12,6 +12,8 @@ import java.awt.*;
 
 public static void main(String[] args){
 
+    // I want to call on the get marks file for each test and then add to the grid!
+
 
     // ---- the grid: 5 x 7----
     JFrame frame = new JFrame("Exam Results");
@@ -23,7 +25,7 @@ public static void main(String[] args){
         cells[i].setBorder(BorderFactory.createLineBorder(Color.BLACK));
         frame.add(cells[i]);
     }
-    // frame settings once, AFTER the loop
+    // frame settings once after loop
     frame.setSize(1400, 300);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
