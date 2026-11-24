@@ -1,26 +1,30 @@
 import assessments.*;
 
+import java.util.List;
+
 
 // please note that this name is just a shortcut for parent class assessment
 // abstract the class to allow for changing + abstract methods
+// the only common theme across assessments is that they contain names
+// within each subclass we need to fill out method to get score from assessmnt feed
 public abstract  class ass {
-    private String student_name; // encapsulate fields so important info can't be accessed elsewhere
-    private int CID;
-    private String deg_type;
-    private String exam;
+    protected String examname;
 
 
-    public ass(String student_name, int CID, String deg_type, String exam) {
-        this.student_name = student_name;                // field on the LEFT, parameter on the RIGHT
-        this.CID = CID;
-        this.deg_type = deg_type;
-        this.exam = exam;
+
+    public ass(String examname) {
+        this.examname = examname;
+
     }
 
-    public abstract void getCID(); // leave for each exam
-    public abstract void getStudentName();
-    public abstract void getStudentType();
-    
+    // all subclasses will use the list of CIDs
+    public List<String> CIDS(){
+        return AssessmentFeed.getCIDs();
+    }
+
+    // all subclasses will need to calculate final
+    public abstract double[] getmarks(); // all assessments will need to get marks
+    public abstract double getverificationmark();
 
 }
 
